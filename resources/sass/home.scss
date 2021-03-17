@@ -1,0 +1,78 @@
+.picture-primary{
+     max-width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+.picture-secundary{
+    max-width: 75%;
+     display: block;
+    margin: 0 auto;
+   
+}
+
+.text-regular-j{
+    font-family: Quicksand-regular;
+   
+    text-align: justify;
+}
+.text-regular{
+    font-family: Quicksand-regular;
+      
+}
+
+.text-f-light{
+     font-family: Quicksand-light;
+
+}
+.text-strong{
+    font-family: Quicksand-regular;
+    color: $color-title;
+    font-style: normal;
+    font-weight: 600;
+    
+    
+}
+.text-bold-orange{
+    font-family: Quicksand-bold;
+    color: $color-title;
+    
+    
+}
+
+.text-regular-orange{
+    font-family: Quicksand-regular;
+    color: $color-title;
+    
+    
+}
+
+
+
+.text-title{
+    font-size: 2.1rem;
+   
+}
+
+.text-header-title{
+     font-size: 3.1rem;
+}
+
+.text-carbon{
+   color: $color-carbon;
+   
+}
+.text-blue{
+    color: $blue;
+}
+
+.text-orange{
+    color: $orange;
+}
+
+.text-header{
+    font-family: Beyond The Mountains;
+    font-size: 2.5rem;
+    
+    font-weight: 500;
+    
+}

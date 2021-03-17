@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="136" viewBox="0 0 136 136">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #1e1e1e;
+        stroke-width: 3px;
+      }
+
+      .cls-1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="icon_S" data-name="icon S" transform="translate(-892 -225)">
+    <g id="lock" transform="translate(923 253.916)">
+      <rect id="Rectangle_18" data-name="Rectangle 18" class="cls-1" width="68" height="43" rx="8" transform="translate(3 34.084)"/>
+      <path id="Path_2" data-name="Path 2" class="cls-1" d="M7,31.7V18.5C7,9.387,15.566,2,26.133,2S45.267,9.387,45.267,18.5V31.7" transform="translate(11.307)"/>
+    </g>
+    <g id="circle" class="cls-2" transform="translate(892 225)">
+      <circle class="cls-3" cx="68" cy="68" r="68"/>
+      <circle class="cls-4" cx="68" cy="68" r="66.5"/>
+    </g>
+  </g>
+</svg>

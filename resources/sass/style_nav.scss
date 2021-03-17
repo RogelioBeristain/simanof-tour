@@ -1,0 +1,140 @@
+
+.child-nav {
+    vertical-align: sub;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 3.5rem;
+}
+
+.child-nav-logo {
+    vertical-align: sub;
+
+    height: 3.5rem;
+}
+.navbar {
+    
+    padding-top: 0px;
+ 
+    padding-bottom: 0px;
+}
+.text-logo {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: "Trebuchet MS";
+    font-size: 1.8rem;
+}
+.text-logo-2 {
+    display: inline-block;
+    white-space: nowrap;
+    color: $color-title;
+    font-family: "Trebuchet MS";
+    font-size: 1.8rem;
+}
+.well {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.nav-link {
+    font-family: "Beyond The Mountains";
+    font-size: 3.5rem;
+}
+
+@media (min-width: 576px) {
+    .child-nav {
+        vertical-align: sub;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 3.5rem;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .child-nav {
+        
+        vertical-align: sub;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 3.5rem;
+    }
+
+    .nav-link {
+    font-family: "Beyond The Mountains";
+    font-size: 1.5rem;
+}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .child-nav {
+        vertical-align: sub;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 3.5rem;
+        display: none;
+    }
+
+    .text-logo {
+        display: none;
+        
+      
+    }
+    .text-logo-2 {
+      display: none;
+        
+       
+    }
+
+    .nav-link {
+  
+    font-size: 1rem;
+}
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .child-nav {
+        vertical-align: sub;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 3.5rem;
+        display: none;
+    }
+
+       .nav-link {
+  
+    font-size: 1.5rem;
+}
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .child-nav {
+        vertical-align: sub;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 3.5rem;
+        display: none;
+    }
+
+       .nav-link {
+  
+    font-size: 1.3rem;
+}
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

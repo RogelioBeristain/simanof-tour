@@ -1,0 +1,176 @@
+body {
+  
+  padding-top: 3.5rem;
+  background-color: #f8f8f8;
+}
+
+.btn-xl{
+  padding: .5rem 3rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    border-radius: .2rem;
+}
+.btn-xl:hover{
+  padding: .5rem 3rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    border-radius: .2rem;
+}
+
+.btn-xl-purple-radius{
+  padding: .3rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    border-radius: 2rem;
+
+    background-color: $purple;
+    border-color: $purple;
+}
+
+.btn-sm-purple-radius{
+  padding: .2rem 1.5rem;
+    font-size: 1.0rem;
+    line-height: 1.4;
+    border-radius: 2rem;
+
+    background-color: $purple;
+    border-color: $purple;
+}
+
+
+.btn-xl-purple{
+  padding: .3rem 1.3rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    border-radius: .3rem;
+
+    background-color: $purple;
+    border-color: $purple;
+}
+.btn-xl-purple:hover{
+  padding: .3rem 1.3rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    border-radius: .3rem;
+
+    background-color: $purple;
+    border-color: $purple;
+}
+
+
+.btn-lg-purple{
+  padding: .5rem 1rem;
+     font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+
+    background-color: $purple;
+    border-color: $purple;
+
+   
+  
+   
+}
+.btn-lg-purple:hover{
+    padding: .5rem 1rem;
+     font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+
+    background-color: $purple;
+    border-color: $purple;
+
+   
+}
+
+
+
+
+.btn-lg-purple.disabled, .btn-lg-purple:disabled{
+
+   padding: .5rem 1rem;
+   
+    line-height: 1.5;
+    border-radius: .3rem;
+
+    background-color: $purple;
+    border-color: $purple;
+}
+.btn-xl-purple-radius:hover{
+  padding: .3rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    border-radius: 2rem;
+
+    background-color: $purple;
+    border-color: $purple;
+}
+
+.btn-xl-purple-radius:active{
+  padding: .3rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    border-radius: 2rem;
+
+    background-color: $purple;
+    border-color: $purple;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #8a8a8a;
+}
+.separator::before {
+    margin-right: .25em;
+}
+.separator::after {
+    margin-left: .25em;
+}
+ #container-pdf { overflow: auto; -webkit-overflow-scrolling: touch; height: 100%; }
+      object { width: 100%; height: 1000px }
+
+
+ .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .table-alto {
+    max-height: 100%;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+} 
+ .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+} 

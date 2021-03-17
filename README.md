@@ -1,0 +1,23 @@
+Sandbox
+Account:simanofusa-facilitator@gmail.com
+client_id:AaXYVG_GhAX17XyDgmFls0b5Pkb-kvxzjVEb1sQFn1H1cW8HL-ctcIMpyEA7A54s3gHeOKabrpixA3EM
+secret:EPSO601s8PzRE98UBJVwORZYXYsLbTGiyvQtk1DMin4-ME3CikTwtHoeqhr9ZT21tXxxLv1xokWpVBUE
+
+
+Sandbox
+account_user:rogelio_beristain@test.com
+card:4032035246882070, Visa, 10/2023
+
+6011041816099947
+
+01/2022
+
+marcela@test.com
+4037077644623453
+07/2025
+a1e2i3o4u5
+
+
+AXHqkxVBYVLuI4qM8OzwSud_b67kMLtc0hp129G-P_zdOjIeKbK6TSZloDlJukh2wmYXQbU4-2JKAiLn
+
+EKpoEcZqwgHKxaxMWi-cSA1nErTAYU8L3kedsfDMEJyGbRus3-UjBy7deXpyzISGX2tK9fyM-0y9TAaF

@@ -1,0 +1,52 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+@font-face {
+  font-family: 'Beyond The Mountains';
+  
+  src: local('Beyond The Mountains'), url(/assets/font/beyond_the_mountains.otf);
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  
+  src: local('Trebuchet MS'), url(/assets/font/trebuc.ttf);
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  
+  src: local('Quicksand'), url(/assets/font/Quicksand_Light.otf);
+}
+
+@font-face {
+  font-family: 'Quicksand-light';
+  
+  src: local('Quicksand'), url(/assets/font/Quicksand_Light.otf);
+}
+@font-face {
+  font-family: 'Quicksand-bold';
+  
+  src: local('Quicksand'), url(/assets/font/Quicksand_Bold.otf);
+}
+
+@font-face {
+  font-family: 'Quicksand-regular';
+  
+  src: local('Quicksand'), url(/assets/font/Quicksand_Book.otf);
+}
+
+// Variables
+@import 'variables';
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//template
+@import 'template';
+@import 'home';
+@import 'style_nav';
+
+@import 'main';
+@import 'video_thumbl';
