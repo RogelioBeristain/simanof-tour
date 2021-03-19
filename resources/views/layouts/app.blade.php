@@ -203,7 +203,7 @@
         <hr class="my-auto flex-grow-1">
           <footer>
  
-  <p class="font-size-sm text-center mb-4 py-3"><span class=" opacity-50 mr-1">© 2020 <a class="nav-link-style text-orange nav-link-light" href="http://simanof.com/" target="_blank" rel="noopener">SIMAN ORCHESTRAL FOUNDATION.</a> All Rights Reserved. </span></p>
+  <p class="font-size-sm text-center mb-4 py-3"><span class=" opacity-50 mr-1">© 2021 <a class="nav-link-style text-orange nav-link-light" href="http://simanof.com/" target="_blank" rel="noopener">SIMAN ORCHESTRAL FOUNDATION.</a> All Rights Reserved. </span></p>
     
         </footer>
 
