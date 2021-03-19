@@ -16,15 +16,18 @@ class MailUserController extends Controller
      */
     public function sendAll(Request $request){
 
-        $users= User::all();
+        $users= User::all()-> filter(function($user, $key){
+            return $user->email[0] == 'r'; 
+        });
 
-      
+        $message_default_in_html="Hola este domingo 2 de agosto se activa la recepción de audiciones. <br /> Envía tu audición <br />a través de nuestra pagina web.<br /> <span style='text-decoration: underline;'> <span style='color: #198fc7; text-decoration: underline;'>tour.simanof.com</span></span>";
+
         foreach ($users as $key => $user) {
-              $text_html=" Hola ".$user->first_name." este domingo 2 de agosto se activa la recepción de audiciones. <br />
-                    Envía tu audición <br />a través de nuestra pagina web.<br />
-                    <span style='text-decoration: underline;'> <span style='color: #198fc7; text-decoration: underline;'>tour.simanof.com</span></span>";
-               $url_picture="http://www.tour.simanof.com/assets/mail/logo.jpg"; 
-              $mensaje = array(
+            $text_html="";
+            $url_picture="http://www.tour.simanof.com/assets/mail/logo.jpg"; 
+            
+            
+            $mensaje = array(
                 'email'=>$user->email,
                 'user'=>$user,
                 'url_picture'=>$url_picture,
@@ -34,17 +37,14 @@ class MailUserController extends Controller
                 'a_file'=> []
             );
 
-         
 
 
              //Mail::to("rogelio26.dev@gmail.com")->send(new SimpleEmail($mensaje));
- 
-          
-            Mail::to($user->email)->send(new SimpleEmail($mensaje)); 
+            $emailAdress= $user->email;
+            Mail::to($emailAdress)->send(new SimpleEmail($mensaje)); 
         }
         
         return $users;
-       
 
     }
 

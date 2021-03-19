@@ -29,11 +29,7 @@ class SimpleEmail extends Mailable
      */
     public function build()
     {
-      
-           
-            return $this->subject( $this->mensaje['subject'])
-        
-          ->view('mails.simple');
+        return $this->subject($this->mensaje['subject'])->view('mails.simple');
 
 
     }
