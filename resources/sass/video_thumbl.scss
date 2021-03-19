@@ -1,37 +1,25 @@
 .video-play{
-
-   /*  height: 50% !important;
-     width: 50% !important; */
-
-     position: absolute;
-  /*   top: 0;
-    bottom: 0;
-    left: 0;
-    width: 60% !important;
-    height: 60% !important;
-    border: 0; */
+    position: absolute;
 
 
-     -webkit-filter: drop-shadow(5px 5px 5px #222 ) grayscale(50%);
-  filter: drop-shadow(5px 5px 5px #222) grayscale(50%);
 
-  opacity: 95%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222 ) grayscale(50%);
+    filter: drop-shadow(5px 5px 5px #222) grayscale(50%);
+    opacity: .7;
+    transition: opacity 1s ease-out;
 
 }
 .video-play:hover{
     background-color: #ffffff00;
-     opacity: 100%;
-     cursor: pointer;
-
-
+    opacity: .95;
+    cursor: pointer;
 }
 #contenedor-multimedia{
-  display:none;
-
+    display:none;
 }
 .img-back{
     position: absolute;
-  
+
      -webkit-filter: drop-shadow(5px 5px 5px #222 );
   filter: drop-shadow(5px 5px 5px #222);
 
@@ -41,6 +29,6 @@
 
 .img-front{
     position: absolute;
-   
+
 
 }
