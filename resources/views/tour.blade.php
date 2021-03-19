@@ -85,45 +85,38 @@
 
                                     <tbody>
                                         <tr>
-                                            <th scope="row">26 de Junio 2020</th>
-                                            <td>Comienza el proceso de pre-inscripción a través de la
-                                                red electrónica.</td>
-
-
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2 de Agosto 2020</th>
+                                            <th scope="row">30 de Marzo 2021</th>
                                             <td>Comienza el proceso de audiciones.</td>
 
                                         </tr>
                                         <tr>
-                                            <th scope="row">31 de Agosto 2020</th>
-                                            <td>ultimo día para el envío de audiciones a través de la
+                                            <th scope="row">30 de Abril 2021</th>
+                                            <td>Último día para el envío de audiciones a través de la
                                                 red electrónica.</td>
 
                                         </tr>
 
                                         <tr>
-                                            <th scope="row">15 de Septiembre 2020</th>
-                                            <td>Aviso de admisión al TOUR SIMANOF ITALIA 2021.</td>
+                                            <th scope="row">15 de Abril 2021</th>
+                                            <td>Aviso de admisión al TOUR SIMANOF ITALIA 2022.</td>
 
                                         </tr>
 
                                         <tr>
-                                            <th scope="row">Abril del 2021</th>
+                                            <th scope="row">Abril del 2022</th>
                                             <td>Campamento de preparación, México</td>
 
                                         </tr>
 
                                         <tr>
-                                            <th scope="row">Junio del 2021</th>
+                                            <th scope="row">Junio del 2022</th>
                                             <td>Campamento de preparación Miami, Florida.</td>
 
                                         </tr>
 
                                         <tr>
-                                            <th scope="row">19 al 29 de Julio 2021</th>
-                                            <td>TOUR SIMANOF ITALIA 2021.</td>
+                                            <th scope="row">19 al 29 de Julio 2022</th>
+                                            <td>TOUR SIMANOF ITALIA 2022.</td>
 
                                         </tr>
                                     </tbody>
@@ -177,7 +170,7 @@
                                           <a href="{{ route('register') }}"> Sign up</a>
                                     </span> to be one of the first to <br> know about the
                                     updates of the <br> <span class="text-orange">
-                                        Tour Simanof Italy 2021!
+                                        Tour Simanof Italy!
                                     </span>
                                 </p>
                             </div>
