@@ -20,47 +20,46 @@ ini_set('error_reporting', E_ALL); // or error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 
+$entorno = App::environment();
+$data_config = PaypalConfig::find(1);
 class PaymentsController extends Controller
 {
+
     public function config(Request $request)
     {
-        $entorno = App::environment();
 
-        $data_config = PaypalConfig::find(1);
 
-        if ($entorno == "production") {
+        if ($this->entorno == "production") {
 
-            $clientId = $data_config->client_id_production;
-            $clientSecret = $data_config->client_secret_production;
+            $clientId = $this->data_config->client_id_production;
+            $clientSecret = $this->data_config->client_secret_production;
 
             return json_encode($clientId);
         } else {
 
-            $clientId = $data_config->client_id_sandbox;
-            $clientSecret = $data_config->client_secret_sandbox;
+            $clientId = $this->data_config->client_id_sandbox;
+            $clientSecret = $this->data_config->client_secret_sandbox;
             return json_encode($clientId);
 
         }
 
     }
-
+    /**
+     * Cambiar el nombre del metodo
+     */
     public function payAuditionC(Request $request)
     {
+        if ($this->entorno == "production") {
 
-        $entorno = App::environment();
-
-        $data_config = PaypalConfig::find(1);
-        if ($entorno == "production") {
-
-            $clientId = $data_config->client_id_production;
-            $clientSecret = $data_config->client_secret_production;
+            $clientId = $this->data_config->client_id_production;
+            $clientSecret = $this->data_config->client_secret_production;
             $environment = new ProductionEnvironment($clientId, $clientSecret);
             $client = new PayPalHttpClient($environment);
 
         } else {
 
-            $clientId = $data_config->client_id_sandbox;
-            $clientSecret = $data_config->client_secret_sandbox;
+            $clientId = $this->data_config->client_id_sandbox;
+            $clientSecret = $this->data_config->client_secret_sandbox;
             $environment = new SandboxEnvironment($clientId, $clientSecret);
             $client = new PayPalHttpClient($environment);
         }
@@ -102,21 +101,17 @@ class PaymentsController extends Controller
 
     public function payAuditionA(Request $request)
     {
+        if ($this->entorno == "production") {
 
-        $entorno = App::environment();
-
-        $data_config = PaypalConfig::find(1);
-        if ($entorno == "production") {
-
-            $clientId = $data_config->client_id_prodution;
-            $clientSecret = $data_config->client_secret_prodution;
+            $clientId = $this->data_config->client_id_prodution;
+            $clientSecret = $this->data_config->client_secret_prodution;
             $environment = new ProductionEnvironment($clientId, $clientSecret);
             $client = new PayPalHttpClient($environment);
 
         } else {
 
-            $clientId = $data_config->client_id_sandbox;
-            $clientSecret = $data_config->client_secret_sandbox;
+            $clientId = $this->data_config->client_id_sandbox;
+            $clientSecret = $this->data_config->client_secret_sandbox;
             $environment = new SandboxEnvironment($clientId, $clientSecret);
             $client = new PayPalHttpClient($environment);
         }
