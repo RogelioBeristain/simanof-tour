@@ -68,7 +68,7 @@
                                             </span>
 
                                             <span class="text-blue">
-                                                Italy 2021!
+                                                Italy!
                                             </span>
                                         </div>
 
@@ -88,7 +88,7 @@
                                             <th scope="row">26 de Junio 2020</th>
                                             <td>Comienza el proceso de pre-inscripción a través de la
                                                 red electrónica.</td>
-                                               
+
 
                                         </tr>
                                         <tr>
@@ -193,7 +193,7 @@
                                 <p class="text-center text-title text-regular">
                                     <span class="text-blue">
                                           <a href="{{ route('profile') }}"> Ya puedes hacer tu audición </a>
-                                    </span>  <br> 
+                                    </span>  <br>
                                     Enviar tu audición es el primer paso para ser parte de <span class="text-orange">Tour Simanof 2021.   </span><br> <!-- <span class="text-orange">
                                         Tour Simanof Italy 2021!
                                     </span> -->

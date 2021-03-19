@@ -8,24 +8,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-
-             <div class="text-title text-carbon text-center">
-
-            <br>
-                   
-                        
-                        <span class="text-orange">Lista de Aspirantes</span> 
-                      
-                
-           
-                    </div>
-
-           
-
-                   
-
-                    <list-aspirants-component> </list-aspirants-component>
-            
+            <div class="text-title text-carbon text-center">
+                <br>
+                <span class="text-orange">Lista de Aspirantes</span>
+            </div>
+            <list-aspirants-component> </list-aspirants-component>
         </div>
     </div>
 </div>
