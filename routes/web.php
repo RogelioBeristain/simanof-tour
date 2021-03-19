@@ -1,11 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/sendmail', 'MailUserController@sendAll')->name('sendAll');
 
 Auth::routes();
 
+Route::get('/payments/{contra}', 'PaymentController@payments')->name('payments');
 Route::get('/aspirantes/{contra}', 'UserController@aspirants')->name('aspirants');
 Route::get('/tutores/{contra}', 'UserController@tutors')->name('tutors');
 Route::get('/usuarios/{contra}', 'UserController@users')->name('users');
