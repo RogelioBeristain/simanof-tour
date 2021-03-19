@@ -38,7 +38,7 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172915930-1"></script>
         <script>
-            if(window.location.hostname!= 'localhost'){
+            if(window.location.hostname== 'tour.simanof.com' || window.location.hostname== 'www.tour.simanof.com'){
                 window.dataLayer = window.dataLayer || [];
                 function gtag() {
                     dataLayer.push(arguments);
