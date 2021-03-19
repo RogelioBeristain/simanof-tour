@@ -14,7 +14,7 @@ use PayPalCheckoutSdk\Core\ProductionEnvironment;
 use PayPalCheckoutSdk\Core\SandboxEnvironment;
 use PayPalCheckoutSdk\Orders\OrdersCaptureRequest;
 use PayPalCheckoutSdk\Orders\OrdersCreateRequest;
-use Symfony\Component\HttpKernel\Exception\HttpException;
+use PayPalHttp\HttpException;
 
 ini_set('error_reporting', E_ALL); // or error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -43,6 +43,7 @@ class PaymentsController extends Controller
         }
 
     }
+
     public function payAuditionC(Request $request)
     {
 
@@ -129,26 +130,26 @@ class PaymentsController extends Controller
 
             $pago = new SimanofPayment();
 
-            $pago->total = $response->result->purchase_units[0]->payments->captures[0]->amount->value; //1
-            $pago->total_tour = ($response->result->purchase_units[0]->payments->captures[0]->seller_receivable_breakdown->net_amount->value);
-            $pago->fee = ($response->result->purchase_units[0]->payments->captures[0]->seller_receivable_breakdown->paypal_fee->value);
-            $pago->currency_code = ($response->result->purchase_units[0]->payments->captures[0]->amount->currency_code);
-            $pago->status = json_encode($response->result->purchase_units[0]->payments->captures[0]->status);
-            $pago->date_register = new Carbon($response->result->purchase_units[0]->payments->captures[0]->create_time);
-            $pago->country_code = json_encode($response->result->payer->address->country_code);
-            $pago->zip_code = json_encode($response->result->purchase_units[0]->shipping->address->postal_code);
-            $pago->full_name = json_encode($response->result->purchase_units[0]->shipping->name->full_name);
-            $pago->order_id = json_encode($response->result->id);
-            $pago->capture_id = json_encode($response->result->purchase_units[0]->payments->captures[0]->id);
-            $pago->paypal_email = json_encode($response->result->payer->email_address);
-            $pago->payer_id = json_encode($response->result->payer->payer_id);
+            $pago->total = $response->purchase_units[0]->payments->captures[0]->amount->value; //1
+            $pago->total_tour = ($response->purchase_units[0]->payments->captures[0]->seller_receivable_breakdown->net_amount->value);
+            $pago->fee = ($response->purchase_units[0]->payments->captures[0]->seller_receivable_breakdown->paypal_fee->value);
+            $pago->currency_code = ($response->purchase_units[0]->payments->captures[0]->amount->currency_code);
+            $pago->status = json_encode($response->purchase_units[0]->payments->captures[0]->status);
+            $pago->date_register = new Carbon($response->purchase_units[0]->payments->captures[0]->create_time);
+            $pago->country_code = json_encode($response->payer->address->country_code);
+            $pago->zip_code = json_encode($response->purchase_units[0]->shipping->address->postal_code);
+            $pago->full_name = json_encode($response->purchase_units[0]->shipping->name->full_name);
+            $pago->order_id = json_encode($response->id);
+            $pago->capture_id = json_encode($response->purchase_units[0]->payments->captures[0]->id);
+            $pago->paypal_email = json_encode($response->payer->email_address);
+            $pago->payer_id = json_encode($response->payer->payer_id);
             $pago->type_payment_id = 1; //14
             $pago->save();
             $user = Auth::user();
 
             $type_payment = TypePayment::find(1);
 
-            $user->payments()->save($pago);
+            $user->payments->save($pago);
             $type_payment->payments()->save($pago);
 
 #$response=$response->result->purchase_units[0]->payments->captures[0]->seller_receivable_breakdown->net_amount['value'];
