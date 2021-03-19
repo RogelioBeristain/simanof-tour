@@ -36,6 +36,11 @@ Vue.component(
 );
 
 Vue.component(
+    "list-payments-component",
+    require("./components/ListPayments.vue").default
+);
+
+Vue.component(
     "profile-user-component",
     require("./components/ProfileUser.vue").default
 );

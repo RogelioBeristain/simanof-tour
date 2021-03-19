@@ -8,10 +8,11 @@ Route::get('/sendmail', 'MailUserController@sendAll')->name('sendAll');
 
 Auth::routes();
 
-Route::get('/payments/{contra}', 'PaymentController@payments')->name('payments');
+Route::get('/pagos/{contra}', 'PaymentsController@payments')->name('payments');
 Route::get('/aspirantes/{contra}', 'UserController@aspirants')->name('aspirants');
 Route::get('/tutores/{contra}', 'UserController@tutors')->name('tutors');
 Route::get('/usuarios/{contra}', 'UserController@users')->name('users');
+Route::get('/payments', 'PaymentsController@payments')->name('payments.api');
 Route::get('/aspirants', 'UserController@aspirants')->name('aspirants.api');
 Route::get('/tutors', 'UserController@tutors')->name('tutors.api');
 Route::get('/users', 'UserController@users')->name('users.api');

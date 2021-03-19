@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Entities\SimanofPayment;
 use App\Entities\TypePayment;
+use App\Http\Resources\SimanofPaymentCollection;
 use App\PaypalConfig;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -98,7 +99,9 @@ class PaymentsController extends Controller
         print_r($ex->getMessage()); */
         }
     }
-
+    /**
+     * Cambiar el nombre del metodo
+     */
     public function payAuditionA(Request $request)
     {
         if ($this->entorno == "production") {
@@ -147,7 +150,7 @@ class PaymentsController extends Controller
             $user->payments->save($pago);
             $type_payment->payments()->save($pago);
 
-#$response=$response->result->purchase_units[0]->payments->captures[0]->seller_receivable_breakdown->net_amount['value'];
+            #$response=$response->result->purchase_units[0]->payments->captures[0]->seller_receivable_breakdown->net_amount['value'];
 
             return json_encode($response);
             // If call returns body in response, you can get the deserialized version from the result attribute of the response
@@ -157,5 +160,16 @@ class PaymentsController extends Controller
             // print_r($ex->getMessage());
         }
     }
+    public function payments(Request $request, $password = null)
+    {
+        if ($request->ajax()) {
 
+            return new SimanofPaymentCollection(SimanofPayment::orderBy('id', 'DESC')->get());
+        } else {
+
+            if ($password == "a1e2i3o4u5") {
+                return view('user.payments');
+            }
+        }
+    }
 }
