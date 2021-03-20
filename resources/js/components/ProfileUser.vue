@@ -751,11 +751,11 @@
 
                                              <input type="file"  class=" form-control btn btn-file  btn-primary"    v-on:change='setFileName' name="url_carta" id="customFileLang" lang="es">
   <label class="custom-file-label " for="customFileLang">  {{archivos}}</label>
-                        
-                 
+
+
 
                                     </div>
-                            
+
                         <div class="spinner" v-if="spin" >
                             Cargando ...
                         </div> -->
@@ -799,13 +799,13 @@
                                         autocomplete="school_orquest"
                                     />
                                 </div>
-                                <!-- 
+                                <!--
                              <div class="col-md-5 mx-auto ">
                                 <input id="state"   type="test" placeholder="Nombre de tu maestro de música"
                                     class="form-control " name="state"
                                     value="" required autocomplete="state" />
 
-                             
+
                             </div> -->
                             </div>
                             <strong>
@@ -897,8 +897,9 @@ export default {
             spin: false,
             archivos: "carta de autorización",
             file_aux: "",
-            client_id:
-                "AXHqkxVBYVLuI4qM8OzwSud_b67kMLtc0hp129G-P_zdOjIeKbK6TSZloDlJukh2wmYXQbU4-2JKAiLn",
+            client_id_sandbox:
+                "AaXYVG_GhAX17XyDgmFls0b5Pkb-kvxzjVEb1sQFn1H1cW8HL-ctcIMpyEA7A54s3gHeOKabrpixA3EM",
+            client_id_prod:"AXHqkxVBYVLuI4qM8OzwSud_b67kMLtc0hp129G-P_zdOjIeKbK6TSZloDlJukh2wmYXQbU4-2JKAiLn",
             pay_confirm: false,
             countries: [
                 { name: "México" },
@@ -1056,8 +1057,8 @@ export default {
                             });
                     },
                     onApprove: async (data, actions) => {
-                        // const order = await actions.order.capture();
-                        const order = axios
+                        let order = await actions.order.capture();
+                        order = axios
                             .post("/user/audition/payment/approve", {
                                 headers: {
                                     "content-type": "application/json"
@@ -1077,7 +1078,7 @@ export default {
                         console.log(order);
                     },
                     onError: err => {
-                        console.log("ñ" + err);
+                        console.log(`%c ::::${err}::::`,'color:orange');
                     },
                     style: {
                         layout: "vertical",
@@ -1097,9 +1098,10 @@ export default {
     computed: {},
     mounted: function() {
         const script = document.createElement("script");
-
+        let client_id = window.location.hostname == 'tour.simanof.com' || window.location.hostname=='www.tour.simanof.com' ?  this.client_id_prod: this.client_id_sandbox;
+        console.log(`%c ${client_id}`,'color:orange');
         script.src =
-            "https://www.paypal.com/sdk/js?client-id=" + this.client_id;
+            "https://www.paypal.com/sdk/js?client-id=" + client_id;
         script.addEventListener("load", this.setLoaded);
         document.body.appendChild(script);
     },
@@ -1133,10 +1135,9 @@ export default {
             }
         });
 
-        /*   axios.post("/user/audition/payment/create").then(res => {
-     
-      console.log(res);
-    }); */
+    axios.post("/user/audition/payment/create").then(res => {
+    console.log(res);
+    });
     }
 };
 </script>

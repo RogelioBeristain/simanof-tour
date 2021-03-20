@@ -9,6 +9,7 @@ use Spatie\Permission\Traits\HasRoles;
 use App\Entities\UserIdentity;
 use App\Entities\SimanofPayment;
 use App\Entities\UserSession;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -20,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email','phone', 'password','gender','type_account','birthday','birthday_year','birthday_day','birthday_mount',
+        'first_name', 'last_name', 'email', 'phone', 'password', 'gender', 'type_account', 'birthday', 'birthday_year', 'birthday_day', 'birthday_mount',
     ];
 
     /**
@@ -41,18 +42,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-     public function user_identity()
+    public function user_identity()
     {
         return $this->hasOne(UserIdentity::class);
     }
 
-       public function payments()
+    public function payments()
     {
         return $this->hasMany(SimanofPayment::class);
     }
 
 
-         public function sessions()
+    public function sessions()
     {
         return $this->hasMany(UserSession::class);
     }

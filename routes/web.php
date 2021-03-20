@@ -22,8 +22,8 @@ Route::get('/user/profile', 'UserController@profile')->name('profile.api');
 Route::post('/user/profile/update', 'UserController@profileUpdate')->name('profile.update.api');
 #endregion [Profile]
 #region [Routes Paypal]
-Route::post('user/audition/payment/create', 'PaymentsController@payAuditionC')->name('payment.audition.c');
-Route::post('/user/audition/payment/approve', 'PaymentsController@payAuditionA')->name('payment.audition.a');
+Route::post('user/audition/payment/create', 'PaymentsController@payAuditionCreate')->name('payment.audition.c');
+Route::post('/user/audition/payment/approve', 'PaymentsController@payAuditionApprove')->name('payment.audition.a');
 Route::get('/paypal/config', 'PaymentsController@config')->name('config.api');
 #endregion [Routes Paypal]
 
